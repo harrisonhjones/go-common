@@ -2,6 +2,9 @@
 
 Common helpers / utils for building go libraries and applications.
 
+[![Go Reference](https://pkg.go.dev/badge/harrisonhjones.com/go-common.svg)](https://pkg.go.dev/harrisonhjones.com/go-common)
+[![Go Report Card](https://goreportcard.com/badge/harrisonhjones.com/go-common)](https://goreportcard.com/report/harrisonhjones.com/go-common)
+
 ## Packages
 
 ### `bind`
