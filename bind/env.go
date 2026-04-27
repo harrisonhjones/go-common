@@ -7,7 +7,9 @@ import (
 	"reflect"
 )
 
-// FromEnv loads data into v with values from the local environment.
+// FromEnv populates the struct pointed to by v with values from environment
+// variables. v must be a non-nil pointer to a struct. See the package
+// documentation for supported struct tags and field types.
 func FromEnv(ctx context.Context, v any) error {
 	if v == nil {
 		return fmt.Errorf("v must not be nil")

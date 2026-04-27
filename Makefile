@@ -19,7 +19,7 @@ vet:
 
 ## Format all Go files
 fmt:
-	gofmt -w .
+	gofmt -s -w .
 
 ## Tidy module dependencies
 tidy:

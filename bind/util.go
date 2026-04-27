@@ -8,12 +8,16 @@ import (
 	"strings"
 )
 
-// Normalizer provides an interface to Normalize something.
+// Normalizer is implemented by structs that need to adjust field values after
+// binding (e.g. lowercasing hostnames). Normalize is called after all fields
+// are set but before validation.
 type Normalizer interface {
 	Normalize(context.Context)
 }
 
-// Validator provides an interface to Validate something.
+// Validator is implemented by structs that need to check invariants after
+// binding. Validate is called after normalization; a non-nil return value
+// causes the bind function to return an error.
 type Validator interface {
 	Validate(context.Context) error
 }

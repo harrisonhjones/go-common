@@ -7,8 +7,10 @@ import (
 	"reflect"
 )
 
-// FromFlags loads data into v with values parsed from command line flags.
-// args should typically be os.Args[1:].
+// FromFlags populates the struct pointed to by v with values parsed from
+// command-line flags. args should typically be os.Args[1:]. v must be a
+// non-nil pointer to a struct. See the package documentation for supported
+// struct tags and field types.
 func FromFlags(ctx context.Context, args []string, v any) error {
 	if v == nil {
 		return fmt.Errorf("v must not be nil")
